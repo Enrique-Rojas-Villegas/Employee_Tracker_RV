@@ -41,7 +41,7 @@ inquirer
                 break;
 
             case 'Update an employee role':
-                /*llamo a mi funcion que mostrará todos los departamentos*/
+                newEmployeeRole();
                 break;
 
             default:
@@ -155,11 +155,49 @@ function addEmployee() {
         });
 };
 
+
 const newEmployee = (employee_first_name, employee_last_name, employee_role) => {
     allOptions.newEmployee(employee_first_name, employee_last_name, employee_role).then(() => {
         console.log(`Added ${employee_first_name} to the database`);
         console.log(`Added ${employee_last_name} as last name`);
         console.log(`Added ${employee_role} to the database`);
+        Questions();
+    });
+};
+
+function newEmployeeRole() {
+    allOptions.EmployeeSelection().then((data) => {
+        const EChoices = data[0];
+
+        allOptions.JobTitle().then((data) => {
+        const JobChoices = data[0];
+
+    inquirer
+        .prompt([
+            {
+                type: "list",
+                message: "Select the role to be updated",
+                name: "e_update",
+                choices: EChoices,
+            },
+            {
+                type: "list",
+                message: "New role for the employee?",
+                name: "u_role",
+                choices: JobChoices,
+            },
+        ])
+
+        .then((answers) => {
+            updateEmployeeRole(answers.u_role, answers.e_update)
+        });
+    });
+    });
+};
+
+const updateEmployeeRole = (role_id, employee_id) => {
+    allOptions.updateEmployeeRole(role_id, employee_id).then(() => {
+        console.log(`Updated employee's role`);
         Questions();
     });
 };

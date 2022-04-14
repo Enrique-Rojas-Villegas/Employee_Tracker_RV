@@ -32,6 +32,18 @@ class allOptions {
     newEmployee(employee_first_name, employee_last_name, employee_role) {
         return this.db.promise().query(`INSERT INTO employee (first_name, last_name, role_id) VALUES (?, ?, ?)`, [employee_first_name, employee_last_name, employee_role]);
     };
+
+    updateEmployeeRole(role_id, employee_id) {
+        return this.db.promise().query(`UPDATE employee SET role_id = (?) WHERE id = (?)`, [role_id, employee_id]);
+    };
+
+    EmployeeSelection() {
+        return this.db.promise().query("SELECT CONCAT(first_name, ' ', last_name) AS name, id AS value FROM employee");
+    };
+
+    JobTitle() {
+        return this.db.promise().query("SELECT title AS name, id AS value FROM role");
+    };
 }
 
 module.exports = new allOptions(db);
