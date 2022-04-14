@@ -23,7 +23,6 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
 - [Contributors](#contributors)
 - [Tests](#tests)
 - [Questions](#questions)
@@ -49,6 +48,8 @@ Enoc Rojas Villegas
 No testing included
 
 ## Questions
+
+Video Explaining Functionality: https://github.com/Enrique-Rojas-Villegas/Employee_Tracker_RV.git
 
 Check out my work as well!
 Find me on GitHub:<br>
