@@ -52,7 +52,7 @@ No testing included
 
 ## Questions
 
-Video Explaining Functionality: https://github.com/Enrique-Rojas-Villegas/Employee_Tracker_RV.git
+Video Explaining Functionality: https://drive.google.com/file/d/1jOeK7E6d3rMON3btT3MlWcgSFUqe0cEG/view
 
 Check out my work as well!
 Find me on GitHub:<br>
