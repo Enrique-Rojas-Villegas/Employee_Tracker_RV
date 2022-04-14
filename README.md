@@ -27,6 +27,9 @@
 - [Tests](#tests)
 - [Questions](#questions)
 
+![Main](./images/main.PNG)
+![Second](./images/second.PNG)
+
 ## Installation
 
 What are the steps required to install your project?
